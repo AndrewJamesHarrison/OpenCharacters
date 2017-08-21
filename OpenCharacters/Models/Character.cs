@@ -7,8 +7,12 @@ namespace OpenCharacters.Models
 {
     public class Character
     {
-        string CharacterName { get; set; }
-        Dictionary<string, string> Notes { get; set; }
+        public string CharacterName { get; set; }
+        public Dictionary<string, string> Notes { get; set; }
         
+        public Character(string name)
+        {
+            CharacterName = name;
+        }
     }
 }
