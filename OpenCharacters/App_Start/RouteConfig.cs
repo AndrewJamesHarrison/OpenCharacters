@@ -18,6 +18,13 @@ namespace OpenCharacters
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "Create",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Home", action = "Create", id= UrlParameter.Optional }
+            );
+            
         }
     }
 }
