@@ -8,15 +8,9 @@
         <p>Select one of the existing templates to make a character that conforms to the rules of a game</p>
     </div>
     <div class="col-md-4">
-        <h2>Templates: </h2>
-        <form action="Create" method="put">
-            <input type="submit" name="Create" value="Test" />
-        </form>
-        <ul>
-            <li>DnD</li>
-            <li>Create a Custom Template</li>
-        </ul>
+       @Html.Action("Character");
     </div>
     <div class="col-md-4">
+        @Html.Action("Character");
     </div>
 </div>

@@ -9,19 +9,28 @@ namespace OpenCharacters.Controllers
 {
     public class HomeController : Controller
     {
+
+        List<Character> charList = new List<Character>();
+
         public ActionResult Index()
         {
             ViewBag.Title = "Home Page";
-
             return View();
         }
 
-        public ActionResult Create()
+        public ActionResult Character()
         {
             ViewBag.Title = "Home Page";
-            Character userCharacter = new Character("Test Name");
+            charList.Add(new Character("Test Name", charList.Count()));
+            return View(charList.Last());
+        }
 
-            return View("Character");
+        public ActionResult Update(Character c)
+        {
+            charList.RemoveAt(c.TempID);
+            charList.Insert(c.TempID, c);
+
+            return RedirectToAction("Index");
         }
 
     }

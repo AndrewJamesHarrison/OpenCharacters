@@ -22,9 +22,10 @@ namespace OpenCharacters.Models
 
         public Func<int> IncreaseCost { get; }
 
-        public CharacterAttribute(string displayname, AttributeType attType)
+        public CharacterAttribute(string displayname, AttributeType attType, int value)
         {
             DisplayName = displayname;
+            AttributeValue = value;
             switch (attType)
             {
                 case (AttributeType.DnD):
