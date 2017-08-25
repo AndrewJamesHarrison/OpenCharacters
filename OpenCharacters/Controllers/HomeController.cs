@@ -21,7 +21,7 @@ namespace OpenCharacters.Controllers
             ViewBag.Title = "Home Page";
             Character userCharacter = new Character("Test Name");
 
-            return View();
+            return View("Character");
         }
 
     }
