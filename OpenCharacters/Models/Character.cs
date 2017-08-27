@@ -10,14 +10,18 @@ namespace OpenCharacters.Models
     {
 
         public string CharacterName { get; set; }
-        public int TempID { get; set; }
         public Dictionary<string, string> Notes { get; set; }
         public List<CharacterAttribute> Attributes { get; }
         
-        public Character(string name, int pos)
+        public Character()
+        {
+            CharacterName = "AAA";
+            Attributes = new List<CharacterAttribute>();
+        }
+
+        public Character(string name)
         {
             CharacterName = name;
-            TempID = pos;
             Attributes = new List<CharacterAttribute>();
         }
 

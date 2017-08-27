@@ -22,9 +22,15 @@ namespace OpenCharacters
             routes.MapRoute(
                 name: "Create",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Character", id= UrlParameter.Optional }
+                defaults: new { controller = "Character", action = "Create", id = UrlParameter.Optional }
             );
-            
+
+            routes.MapRoute(
+                name: "Update",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Character", action = "Update", id = UrlParameter.Optional }
+            );
+
         }
     }
 }

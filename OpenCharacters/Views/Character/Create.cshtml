@@ -4,10 +4,13 @@
     ViewBag.Title = "Character";
 }
 
+@using (Html.BeginForm("Update", "Character", FormMethod.Post, Model))
+{
+
 <div>
 
     <h3>
-        @Html.DisplayNameFor(m => m.CharacterName) : @Html.DisplayFor(m =>m.CharacterName)
+        @Html.DisplayNameFor(m => m.CharacterName) : @Html.DisplayFor(m => m.CharacterName)
     </h3>
 
     <br />
@@ -24,4 +27,6 @@
     </div>
 
 </div>
+
+}
 
